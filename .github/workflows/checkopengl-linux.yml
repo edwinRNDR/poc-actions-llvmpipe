@@ -11,12 +11,12 @@ jobs:
     steps:
       - name: Build llvmpipe
         run: |
-        sudo apt-get install llvm-dev
-        wget https://mesa.freedesktop.org/archive/mesa-20.0.5.tar.xz
-        tar -xf mesa-20.0.5.tar.xz
-        sudo apt-get install meson
-        cd mesa-20.0.5
-        mkdir build
-        cd build
-        meson -D glx=gallium-xlib -D gallium-drivers=swrast
-        ninja
+          sudo apt-get install llvm-dev
+          wget https://mesa.freedesktop.org/archive/mesa-20.0.5.tar.xz
+          tar -xf mesa-20.0.5.tar.xz
+          sudo apt-get install meson
+          cd mesa-20.0.5
+          mkdir build
+          cd build
+          meson -D glx=gallium-xlib -D gallium-drivers=swrast
+          ninja
