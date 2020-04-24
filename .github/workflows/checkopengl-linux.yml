@@ -17,8 +17,9 @@ jobs:
           sudo pip3 install setuptools
           sudo pip3 install wheel
           sudo pip3 install meson
+          sudo pip3 install mako
           cd mesa-20.0.5
           mkdir build
           cd build
-          meson -D glx=disabled -D gallium-drivers=swrast -D egl=auto  -D platforms=surfaceless 
+          meson -D glx=disabled -D gallium-drivers=swrast -D egl=auto  -D platforms=surfaceless
           ninja
