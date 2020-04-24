@@ -1,0 +1,13 @@
+name: Check OpenGL
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -run sudo apt-get install mesa-utils
+      -run glxinfo
