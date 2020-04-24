@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Build llvmpipe
         run: |
-          sudo apt-get install llvm-dev bison flex
+          sudo apt-get install xvfb libgl1-mesa-dri libgl1-mesa-glx llvm-dev bison flex
           wget https://mesa.freedesktop.org/archive/mesa-20.0.5.tar.xz
           tar -xf mesa-20.0.5.tar.xz
           sudo pip3 install setuptools
@@ -21,5 +21,5 @@ jobs:
           cd mesa-20.0.5
           mkdir build
           cd build
-          meson -D glx=disabled -D gallium-drivers=swrast -D egl=auto  -D platforms=surfaceless
+          meson -D glx=disabled -D gallium-drivers=swrast -D egl=true  -D platforms=surfaceless
           ninja
