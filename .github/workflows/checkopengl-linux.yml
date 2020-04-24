@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Build llvmpipe
         run: |
+          sudo add-apt-repository -s "deb http://nl.archive.ubuntu.com/ubuntu/ bionic main restricted"
+          sudo apt-get build-dep libgl1-mesa-dev
           sudo apt-get install xvfb libgl1-mesa-dri libgl1-mesa-glx llvm-dev bison flex
           wget https://mesa.freedesktop.org/archive/mesa-20.0.5.tar.xz
           tar -xf mesa-20.0.5.tar.xz
