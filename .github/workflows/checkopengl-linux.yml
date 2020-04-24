@@ -14,9 +14,9 @@ jobs:
           sudo apt-get install llvm-dev
           wget https://mesa.freedesktop.org/archive/mesa-20.0.5.tar.xz
           tar -xf mesa-20.0.5.tar.xz
-          pip3 install setuptools --user
-          pip3 install wheel --user
-          pip3 install meson --user
+          sudo pip3 install setuptools
+          sudo pip3 install wheel
+          sudo pip3 install meson
           cd mesa-20.0.5
           mkdir build
           cd build
