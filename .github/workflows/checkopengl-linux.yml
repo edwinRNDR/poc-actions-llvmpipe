@@ -9,5 +9,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      -run: sudo apt-get install mesa-utils
-      -run: glxinfo
+      - run: sudo apt-get install mesa-utils
+      - run: glxinfo
