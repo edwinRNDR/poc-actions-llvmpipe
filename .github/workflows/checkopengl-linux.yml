@@ -3,7 +3,8 @@ name: Check OpenGL
 on:
   push:
     tags:
-      - v.*
+      - v0.*
+      - v1.*
 
 jobs:
   build:
