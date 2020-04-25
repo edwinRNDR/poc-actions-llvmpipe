@@ -9,6 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Build llvmpipe
         run: |
           tar -zxf mesa-18.2.3.tar.gz
