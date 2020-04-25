@@ -11,17 +11,9 @@ jobs:
     steps:
       - name: Build llvmpipe
         run: |
-          sudo add-apt-repository -s "deb http://nl.archive.ubuntu.com/ubuntu/ bionic main restricted"
-          sudo apt-get build-dep libgl1-mesa-dev
-          sudo apt-get install xvfb libgl1-mesa-dri libgl1-mesa-glx llvm-dev bison flex
-          wget https://mesa.freedesktop.org/archive/mesa-20.0.5.tar.xz
-          tar -xf mesa-20.0.5.tar.xz
-          sudo pip3 install setuptools
-          sudo pip3 install wheel
-          sudo pip3 install meson
-          sudo pip3 install mako
-          cd mesa-20.0.5
-          mkdir build
-          cd build
-          meson -D glx=disabled -D gallium-drivers=swrast -D egl=true  -D platforms=surfaceless
-          ninja
+          tar -zxf mesa-18.2.3.tar.gz
+          export LD_LIBRARY_PATH=mesa-18.2.3/usr/local/lib/x86_64-linux-gnu
+          export GALLIUM_DRIVER=swr
+          sudo apt-get install mesa-utils
+          sudo apt-get install xvfb
+          xvfb-run glxinfo
