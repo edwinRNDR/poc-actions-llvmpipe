@@ -2,8 +2,8 @@ name: Check OpenGL
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - v.*
 
 jobs:
   build:
