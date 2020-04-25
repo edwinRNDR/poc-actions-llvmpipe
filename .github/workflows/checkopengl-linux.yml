@@ -36,3 +36,4 @@ jobs:
           replaceArtifacts: false
           body: Fully automated release
           artifacts: "result.png"
+          artifactContentType: "image/png"
